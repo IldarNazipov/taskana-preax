@@ -1,0 +1,12 @@
+.statisticContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin: auto 0;
+}
+
+.statisticText {
+  text-align: center;
+  font: var(--font-weight-regular) var(--font-body-md);
+}

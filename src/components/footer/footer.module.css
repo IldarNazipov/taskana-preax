@@ -1,0 +1,38 @@
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-600);
+  transition: background-color var(--transition-duration);
+  padding: 16px 0;
+  z-index: 1;
+}
+
+.footerText {
+  font: var(--font-weight-regular) var(--font-body-md);
+  transition: color var(--transition-duration);
+}
+
+.footerLink,
+.footerLink:link,
+.footerLink:visited {
+  text-decoration: underline;
+  color: var(--color-neutral-600);
+  transition: color var(--transition-duration);
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  color: var(--color-neutral-800);
+}
+
+.footerLink:focus-visible {
+  outline: 2px solid var(--color-neutral-900);
+  outline-offset: 4px;
+  border-radius: 4px;
+  color: var(--color-neutral-800);
+}

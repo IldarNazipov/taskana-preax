@@ -1,0 +1,102 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-600);
+  box-shadow: var(--shadow-sm-default);
+  border-radius: 8px;
+  padding: 8px 8px 8px 12px;
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, color, box-shadow, width;
+}
+
+.selected {
+  color: var(--color-neutral-800);
+}
+
+.dropdownTrigger:focus-visible {
+  outline: 2px solid var(--color-neutral-900);
+  outline-offset: 2px;
+  background-color: var(--color-neutral-300);
+  box-shadow: var(--shadow-sm-hover);
+}
+
+.dropdownTrigger:hover {
+  background-color: var(--color-neutral-300);
+  box-shadow: var(--shadow-sm-hover);
+}
+
+.dropdownTriggerTitle {
+  font: var(--font-weight-semibold) var(--font-body-md);
+}
+
+.dropdownTriggerTitle,
+.dropdownItemTitle {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.dropdownList {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  max-height: calc(
+    100vh - 150px
+  ); /* чтобы не появлялся скролл при списке задач высотой меньше, чем дропдаун */
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+  background-color: var(--color-neutral-0);
+  box-shadow: var(--shadow-lg);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: var(--transition-duration);
+  transition-property: opacity, visibility, background-color;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownItem {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  white-space: nowrap;
+  width: 100%;
+  color: var(--color-neutral-800);
+  border-radius: 8px;
+  transition-duration: var(--transition-duration);
+  transition-property: opacity, color, background-color;
+}
+
+.dropdownItem:focus-visible {
+  outline: 2px solid var(--color-neutral-900);
+  outline-offset: 2px;
+  background-color: var(--color-neutral-200);
+}
+
+button.dropdownItem:hover {
+  background-color: var(--color-neutral-200);
+}
+
+.dropdownItemTitle {
+  font: var(--font-weight-regular) var(--font-body-md);
+}
+
+.dropdownListTitle {
+  font: var(--font-weight-bold) var(--font-body-md);
+}
+
+.hiddenIcon {
+  visibility: hidden;
+}

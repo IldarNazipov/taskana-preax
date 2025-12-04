@@ -1,0 +1,39 @@
+.navBar {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  width: 204px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  gap: 5px;
+  min-height: 0;
+  background-color: var(--color-neutral-100);
+  border-right: 1px solid var(--color-neutral-300);
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, border;
+}
+
+.navBarLink {
+  display: flex;
+  gap: 8px;
+  background-color: var(--color-neutral-800);
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--color-neutral-0);
+  font: var(--font-weight-semibold) var(--font-body-md);
+  box-shadow: var(--shadow-base-default);
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, box-shadow, color;
+}
+
+.navBarLink:hover {
+  background-color: var(--color-neutral-700);
+  box-shadow: var(--shadow-base-hover);
+}
+
+.navBarLink:focus-visible {
+  background-color: var(--color-neutral-700);
+  outline: 2px solid var(--color-neutral-900);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-base-hover);
+}

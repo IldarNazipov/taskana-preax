@@ -1,0 +1,27 @@
+.mainContainer {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  height: 100%;
+  padding-bottom: 56px;
+  overflow-y: auto;
+}
+
+.mainContainer > * {
+  max-width: 996px;
+  width: 100%;
+}
+
+.mainContainerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 24px;
+  padding-bottom: 20px;
+  background-color: var(--color-neutral-0);
+  transition: background-color var(--transition-duration);
+}

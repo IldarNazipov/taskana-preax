@@ -1,0 +1,10 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo:focus-visible {
+  outline: 2px solid var(--color-base-white);
+  outline-offset: 4px;
+  border-radius: 8px;
+}

@@ -1,0 +1,4 @@
+.illustration * {
+  transition-duration: var(--transition-duration);
+  transition-property: fill;
+}

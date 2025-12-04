@@ -1,0 +1,162 @@
+.taskEditor {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 100%;
+  background-color: var(--color-neutral-100);
+  border-left: 1px solid var(--color-neutral-300);
+
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease,
+    background-color var(--transition-duration),
+    border var(--transition-duration);
+}
+
+.scrollable {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.taskEditor.open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.taskEditorHeader {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  padding-bottom: 20px;
+  background-color: var(--color-neutral-100);
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, color, border;
+}
+
+.taskEditorTitle {
+  margin-bottom: 24px;
+  font: var(--font-weight-bold) var(--font-h1);
+}
+
+.taskInputLabel {
+  display: flex;
+  gap: 4px;
+  font: var(--font-weight-bold) var(--font-body-lg);
+  margin-bottom: 12px;
+}
+
+.asterisk {
+  font: var(--font-weight-regular) var(--font-body-lg);
+  color: var(--color-primary-400);
+}
+
+.taskInput {
+  width: 100%;
+  padding: 16px 48px 16px 16px;
+  border: 1px solid var(--color-neutral-400);
+  border-radius: 8px;
+  font: var(--font-weight-regular) var(--font-body-lg);
+  transition-duration: var(--transition-duration);
+  transition-property: border;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.taskInput::placeholder {
+  color: var(--color-neutral-600);
+  font: var(--font-weight-regular) var(--font-body-lg);
+  transition-duration: var(--transition-duration);
+  transition-property: color;
+}
+
+.taskInput:hover {
+  border-color: var(--color-neutral-600);
+}
+
+.taskInput:focus-visible {
+  outline: 2px solid var(--color-neutral-800);
+  border-color: transparent;
+}
+
+.taskInputWrapper {
+  position: relative;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--color-neutral-500);
+  transition-duration: var(--transition-duration);
+  transition-property: color;
+}
+
+.clearBtn:hover {
+  color: var(--color-neutral-800);
+}
+
+.clearBtn:focus-visible {
+  outline: 2px solid var(--color-neutral-900);
+  border-radius: 4px;
+}
+
+.taskEditorContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  padding-top: 4px;
+  flex-grow: 1;
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, color;
+}
+
+.priorityGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.priorityLabel {
+  font: var(--font-weight-bold) var(--font-body-lg);
+}
+
+.priorityOptions {
+  display: flex;
+  gap: 8px;
+}
+
+.taskEditorFooter {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: var(--color-neutral-100);
+  border-top: 1px solid var(--color-neutral-300);
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, color, border;
+}
+
+.leftButtonsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
