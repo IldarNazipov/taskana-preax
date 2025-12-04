@@ -2,8 +2,6 @@
 
 Веб-приложение для управления задачами, созданное в рамках спринта на платформе [PREAX](https://preax.ru/)
 
-Реализовал: Ильдар (ildarito)
-
 ## Запуск приложения
 
 Команда для установки необходимых зависимостей:
@@ -23,3 +21,7 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Демонстрация на Github Pages
+
+https://ildarnazipov.github.io/taskana-preax/
